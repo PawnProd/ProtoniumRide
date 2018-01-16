@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour {
     /// </summary>
     private PlayerMovement pMove;
 
+    public int NbProtonium { get; set; }
+    public float DistanceAchieved { get; set; }
+
 	// Use this for initialization
 	void Start () {
         pMove = GetComponent<PlayerMovement>();
@@ -16,21 +19,28 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (MobileInput.Instance.SwipeLeft)
+        if(LevelManager.Instance.levelState == LevelState.running)
         {
-            pMove.MoveLaneX(false);
+            if (MobileInput.Instance.SwipeLeft)
+            {
+                pMove.MoveLaneX(false);
+            }
+            else if (MobileInput.Instance.SwipeRight)
+            {
+                pMove.MoveLaneX(true);
+            }
+            else if (MobileInput.Instance.SwipeUp)
+            {
+                pMove.MoveLaneY(false);
+            }
+            else if (MobileInput.Instance.SwipeDown)
+            {
+                pMove.MoveLaneY(true);
+            }
+
+            // On calcul la distance parcourue
+            DistanceAchieved += pMove.Speed * Time.deltaTime;
         }
-        else if (MobileInput.Instance.SwipeRight)
-        {
-            pMove.MoveLaneX(true);
-        }
-        else if(MobileInput.Instance.SwipeUp)
-        {
-            pMove.MoveLaneY(false);
-        }
-        else if (MobileInput.Instance.SwipeDown)
-        {
-            pMove.MoveLaneY(true);
-        }
+      
 	}
 }

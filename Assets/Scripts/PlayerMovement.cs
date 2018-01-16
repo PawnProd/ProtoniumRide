@@ -25,6 +25,14 @@ public class PlayerMovement : MonoBehaviour {
     private int _desiredLaneX = 1; // 0 = Gauche, 1 = Milieu, 2 = Droite
     private int _desiredLaneY = 1; // 0 = Haut, 1 = Milieu, 2 = Bas
 
+    public float Speed
+    {
+        get
+        {
+            return _speed;
+        }
+    }
+
 	// Use this for initialization
 	void Start () {
         _controller = GetComponent<CharacterController>();
@@ -32,20 +40,23 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(LevelManager.Instance.levelState == LevelState.running)
+        {
+            // On calcul la futur position
+            Vector3 targetPosition = transform.position.z * Vector3.forward;
+            targetPosition += CalculNextPosition(_desiredLaneX, false);
+            targetPosition += CalculNextPosition(_desiredLaneY, true);
 
-        // On calcul la futur position
-        Vector3 targetPosition = transform.position.z * Vector3.forward;
-        targetPosition += CalculNextPosition(_desiredLaneX, false);
-        targetPosition += CalculNextPosition(_desiredLaneY, true);
+            // On calcul le delta de mouvement
+            Vector3 moveVector = Vector3.zero;
+            moveVector.x = (targetPosition.x - transform.position.x) * _speed;
+            moveVector.y = (targetPosition.y - transform.position.y) * _speed; ;
+            moveVector.z = _speed;
 
-        // On calcul le delta de mouvement
-        Vector3 moveVector = Vector3.zero;
-        moveVector.x = (targetPosition.x - transform.position.x) * _speed;
-        moveVector.y = (targetPosition.y - transform.position.y )* _speed;;
-        moveVector.z = _speed;
+            // On déplace ensuite le player
+            _controller.Move(moveVector * Time.deltaTime);
+        }
 
-        // On déplace ensuite le player
-        _controller.Move(moveVector * Time.deltaTime);
 	}
 
     /// <summary>

@@ -28,8 +28,12 @@ public class CameraMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector3 desiredPosition = lookAt.position + offset;
-        desiredPosition.x = 0;
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime );
+        if(LevelManager.Instance.levelState == LevelState.running)
+        {
+            Vector3 desiredPosition = lookAt.position + offset;
+            desiredPosition.x = 0;
+            transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime);
+        }
+       
     }
 }
