@@ -10,6 +10,11 @@ public class LevelManager : MonoBehaviour {
     public static LevelManager Instance;
 
     /// <summary>
+    /// Le manager de l'ATH
+    /// </summary>
+    public ATHManager athManager;
+
+    /// <summary>
     /// La position du premier module
     /// </summary>
     public Vector3 startPosition;
@@ -19,7 +24,15 @@ public class LevelManager : MonoBehaviour {
     /// </summary>
     public Vector3 offset;
 
+    /// <summary>
+    /// Le controller du player
+    /// </summary>
+    public PlayerController pController;
+
+    public LevelState levelState;
+
     public GameObject testModule;
+    
 
     /// <summary>
     /// La liste des modules spawn
@@ -34,7 +47,14 @@ public class LevelManager : MonoBehaviour {
     private void Start()
     {
         ModulesPool.AddModule(testModule);
+        levelState = LevelState.running;
         Spawn();
+    }
+
+    private void Update()
+    {
+        athManager.UpdateProtoniumText(pController.NbProtonium.ToString());
+        athManager.UpdateDistanceText(pController.DistanceAchieved.ToString());
     }
 
     /// <summary>
@@ -68,4 +88,20 @@ public class LevelManager : MonoBehaviour {
         _currentModules.RemoveAt(0);
         Spawn();
     }
+
+    public void Pause()
+    {
+        levelState = LevelState.paused;
+    }
+
+    public void Play()
+    {
+        levelState = LevelState.running;
+    }
+}
+
+public enum LevelState
+{
+    running,
+    paused
 }
