@@ -1,0 +1,477 @@
+fileFormatVersion: 2
+guid: 4a3f2cb8fc0a4f94da921575b91f4119
+timeCreated: 1516098546
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Birth 001
+    100002: Birth 005
+    100004: Birth 006
+    100006: Birth 007
+    100008: Birth 008
+    100010: Birth 009
+    100012: Birth 010
+    100014: Birth 011
+    100016: Box008
+    100018: Box009
+    100020: Box010
+    100022: Box011
+    100024: Box022
+    100026: Box023
+    100028: Box024
+    100030: Box025
+    100032: Box026
+    100034: Box027
+    100036: Box028
+    100038: Box029
+    100040: Box030
+    100042: Collision 001
+    100044: Collision 002
+    100046: Cylinder001
+    100048: Cylinder002
+    100050: Cylinder004
+    100052: Cylinder007
+    100054: Cylinder008
+    100056: Cylinder009
+    100058: Cylinder010
+    100060: Cylinder011
+    100062: Cylinder013
+    100064: Cylinder014
+    100066: Cylinder015
+    100068: Cylinder016
+    100070: Cylinder017
+    100072: Cylinder026
+    100074: Cylinder027
+    100076: Cylinder028
+    100078: Cylinder029
+    100080: Cylinder030
+    100082: Display 001
+    100084: Display 005
+    100086: Display 006
+    100088: Display 007
+    100090: Display 008
+    100092: Display 009
+    100094: Display 010
+    100096: Display 011
+    100098: Display 012
+    100100: Display 013
+    100102: Display 014
+    100104: Display 015
+    100106: Display 016
+    100108: Display 017
+    100110: Display 018
+    100112: Display 019
+    100114: Event 001
+    100116: Event 005
+    100118: Event 006
+    100120: Event 007
+    100122: Event 008
+    100124: Event 009
+    100126: Event 010
+    100128: Event 011
+    100130: Event 012
+    100132: Event 013
+    100134: Event 014
+    100136: Event 015
+    100138: Event 016
+    100140: Event 017
+    100142: Event 018
+    100144: Event 019
+    100146: Force 001
+    100148: Force 002
+    100150: Particle View 001
+    100152: Particle View 002
+    100154: Particle View 003
+    100156: Particle View 004
+    100158: Position Object 001
+    100160: Position Object 006
+    100162: Position Object 007
+    100164: Position Object 008
+    100166: Position Object 009
+    100168: Position Object 010
+    100170: Position Object 011
+    100172: Position Object 012
+    100174: Render 001
+    100176: Render 005
+    100178: Render 006
+    100180: Render 007
+    100182: Render 008
+    100184: Render 009
+    100186: Render 010
+    100188: Render 011
+    100190: Rotation 001
+    100192: Rotation 002
+    100194: Shape Instance 001
+    100196: Shape Instance 005
+    100198: Shape Instance 006
+    100200: Shape Instance 007
+    100202: Shape Instance 008
+    100204: Shape Instance 009
+    100206: Shape Instance 010
+    100208: Shape Instance 011
+    100210: Speed By Surface 001
+    100212: Speed By Surface 002
+    100214: Sphere004
+    100216: Sphere005
+    100218: Sphere006
+    100220: Sphere010
+    100222: Sphere011
+    100224: Sphere012
+    100226: Sphere013
+    100228: Sphere014
+    100230: Sphere015
+    100232: Sphere016
+    100234: Sphere017
+    100236: Sphere018
+    100238: Sphere019
+    100240: Sphere020
+    100242: Sphere021
+    100244: //RootNode
+    400000: Birth 001
+    400002: Birth 005
+    400004: Birth 006
+    400006: Birth 007
+    400008: Birth 008
+    400010: Birth 009
+    400012: Birth 010
+    400014: Birth 011
+    400016: Box008
+    400018: Box009
+    400020: Box010
+    400022: Box011
+    400024: Box022
+    400026: Box023
+    400028: Box024
+    400030: Box025
+    400032: Box026
+    400034: Box027
+    400036: Box028
+    400038: Box029
+    400040: Box030
+    400042: Collision 001
+    400044: Collision 002
+    400046: Cylinder001
+    400048: Cylinder002
+    400050: Cylinder004
+    400052: Cylinder007
+    400054: Cylinder008
+    400056: Cylinder009
+    400058: Cylinder010
+    400060: Cylinder011
+    400062: Cylinder013
+    400064: Cylinder014
+    400066: Cylinder015
+    400068: Cylinder016
+    400070: Cylinder017
+    400072: Cylinder026
+    400074: Cylinder027
+    400076: Cylinder028
+    400078: Cylinder029
+    400080: Cylinder030
+    400082: Display 001
+    400084: Display 005
+    400086: Display 006
+    400088: Display 007
+    400090: Display 008
+    400092: Display 009
+    400094: Display 010
+    400096: Display 011
+    400098: Display 012
+    400100: Display 013
+    400102: Display 014
+    400104: Display 015
+    400106: Display 016
+    400108: Display 017
+    400110: Display 018
+    400112: Display 019
+    400114: Event 001
+    400116: Event 005
+    400118: Event 006
+    400120: Event 007
+    400122: Event 008
+    400124: Event 009
+    400126: Event 010
+    400128: Event 011
+    400130: Event 012
+    400132: Event 013
+    400134: Event 014
+    400136: Event 015
+    400138: Event 016
+    400140: Event 017
+    400142: Event 018
+    400144: Event 019
+    400146: Force 001
+    400148: Force 002
+    400150: Particle View 001
+    400152: Particle View 002
+    400154: Particle View 003
+    400156: Particle View 004
+    400158: Position Object 001
+    400160: Position Object 006
+    400162: Position Object 007
+    400164: Position Object 008
+    400166: Position Object 009
+    400168: Position Object 010
+    400170: Position Object 011
+    400172: Position Object 012
+    400174: Render 001
+    400176: Render 005
+    400178: Render 006
+    400180: Render 007
+    400182: Render 008
+    400184: Render 009
+    400186: Render 010
+    400188: Render 011
+    400190: Rotation 001
+    400192: Rotation 002
+    400194: Shape Instance 001
+    400196: Shape Instance 005
+    400198: Shape Instance 006
+    400200: Shape Instance 007
+    400202: Shape Instance 008
+    400204: Shape Instance 009
+    400206: Shape Instance 010
+    400208: Shape Instance 011
+    400210: Speed By Surface 001
+    400212: Speed By Surface 002
+    400214: Sphere004
+    400216: Sphere005
+    400218: Sphere006
+    400220: Sphere010
+    400222: Sphere011
+    400224: Sphere012
+    400226: Sphere013
+    400228: Sphere014
+    400230: Sphere015
+    400232: Sphere016
+    400234: Sphere017
+    400236: Sphere018
+    400238: Sphere019
+    400240: Sphere020
+    400242: Sphere021
+    400244: //RootNode
+    2100000: 07 - Default
+    2100002: 02 - Default
+    2100004: No Name
+    2100006: 03 - Default
+    2300000: Box008
+    2300002: Box009
+    2300004: Box010
+    2300006: Box011
+    2300008: Box022
+    2300010: Box023
+    2300012: Box024
+    2300014: Box025
+    2300016: Box026
+    2300018: Box027
+    2300020: Box028
+    2300022: Box029
+    2300024: Box030
+    2300026: Cylinder001
+    2300028: Cylinder002
+    2300030: Cylinder004
+    2300032: Cylinder007
+    2300034: Cylinder008
+    2300036: Cylinder009
+    2300038: Cylinder010
+    2300040: Cylinder011
+    2300042: Cylinder013
+    2300044: Cylinder014
+    2300046: Cylinder015
+    2300048: Cylinder016
+    2300050: Cylinder017
+    2300052: Cylinder026
+    2300054: Cylinder027
+    2300056: Cylinder028
+    2300058: Cylinder029
+    2300060: Cylinder030
+    2300062: Sphere004
+    2300064: Sphere005
+    2300066: Sphere006
+    2300068: Sphere010
+    2300070: Sphere011
+    2300072: Sphere012
+    2300074: Sphere013
+    2300076: Sphere014
+    2300078: Sphere015
+    2300080: Sphere016
+    2300082: Sphere017
+    2300084: Sphere018
+    2300086: Sphere019
+    2300088: Sphere020
+    2300090: Sphere021
+    3300000: Box008
+    3300002: Box009
+    3300004: Box010
+    3300006: Box011
+    3300008: Box022
+    3300010: Box023
+    3300012: Box024
+    3300014: Box025
+    3300016: Box026
+    3300018: Box027
+    3300020: Box028
+    3300022: Box029
+    3300024: Box030
+    3300026: Cylinder001
+    3300028: Cylinder002
+    3300030: Cylinder004
+    3300032: Cylinder007
+    3300034: Cylinder008
+    3300036: Cylinder009
+    3300038: Cylinder010
+    3300040: Cylinder011
+    3300042: Cylinder013
+    3300044: Cylinder014
+    3300046: Cylinder015
+    3300048: Cylinder016
+    3300050: Cylinder017
+    3300052: Cylinder026
+    3300054: Cylinder027
+    3300056: Cylinder028
+    3300058: Cylinder029
+    3300060: Cylinder030
+    3300062: Sphere004
+    3300064: Sphere005
+    3300066: Sphere006
+    3300068: Sphere010
+    3300070: Sphere011
+    3300072: Sphere012
+    3300074: Sphere013
+    3300076: Sphere014
+    3300078: Sphere015
+    3300080: Sphere016
+    3300082: Sphere017
+    3300084: Sphere018
+    3300086: Sphere019
+    3300088: Sphere020
+    3300090: Sphere021
+    4300000: Sphere004
+    4300002: Cylinder001
+    4300004: Cylinder002
+    4300006: Sphere005
+    4300008: Sphere006
+    4300010: Cylinder004
+    4300012: Box008
+    4300014: Box009
+    4300016: Box010
+    4300018: Box011
+    4300020: Cylinder007
+    4300022: Sphere010
+    4300024: Sphere011
+    4300026: Sphere012
+    4300028: Sphere013
+    4300030: Sphere014
+    4300032: Sphere015
+    4300034: Cylinder008
+    4300036: Cylinder009
+    4300038: Cylinder010
+    4300040: Cylinder011
+    4300042: Cylinder013
+    4300044: Cylinder014
+    4300046: Cylinder015
+    4300048: Cylinder016
+    4300050: Cylinder017
+    4300052: Sphere016
+    4300054: Sphere017
+    4300056: Sphere018
+    4300058: Sphere019
+    4300060: Sphere020
+    4300062: Sphere021
+    4300064: Box022
+    4300066: Box023
+    4300068: Box024
+    4300070: Box025
+    4300072: Box026
+    4300074: Box027
+    4300076: Box028
+    4300078: Box029
+    4300080: Cylinder026
+    4300082: Cylinder027
+    4300084: Cylinder028
+    4300086: Cylinder029
+    4300088: Cylinder030
+    4300090: Box030
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
