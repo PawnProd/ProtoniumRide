@@ -29,6 +29,11 @@ public class LevelManager : MonoBehaviour {
     /// </summary>
     public PlayerController pController;
 
+    /// <summary>
+    /// Les données du joueur stockées sur fichier
+    /// </summary>
+    public StorageData storeData;
+
     public LevelState levelState;
 
     public GameObject testModule;
@@ -46,7 +51,8 @@ public class LevelManager : MonoBehaviour {
 
     private void Start()
     {
-        ModulesPool.AddModule(testModule);
+
+        ModulesPool.FillPool(storeData.LoadAvailableModules());
         levelState = LevelState.running;
         Spawn();
     }

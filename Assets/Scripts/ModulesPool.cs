@@ -11,6 +11,15 @@ public class ModulesPool : MonoBehaviour {
 
 
     /// <summary>
+    /// Au lancement de la partie on remplit la piscine
+    /// </summary>
+    /// <param name="avalaibleModule"></param>
+    public static void FillPool(List<GameObject> avalaibleModule)
+    {
+        _allModules = avalaibleModule;
+    }
+
+    /// <summary>
     /// Ajoute le <paramref name="module"/> dans la liste des modules spawnables
     /// </summary>
     /// <param name="module">Le module à ajouter</param>
