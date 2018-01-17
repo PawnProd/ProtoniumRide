@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: 274e7dec74ba59244b8a8fdfd00bb52f
+timeCreated: 1516181310
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Birth 001
+    100002: Birth 005
+    100004: Birth 006
+    100006: Birth 007
+    100008: Collision 001
+    100010: Cone003
+    100012: Cylinder001
+    100014: Cylinder002
+    100016: Display 001
+    100018: Display 005
+    100020: Display 006
+    100022: Display 007
+    100024: Display 008
+    100026: Display 009
+    100028: Display 010
+    100030: Display 011
+    100032: Event 001
+    100034: Event 005
+    100036: Event 006
+    100038: Event 007
+    100040: Event 008
+    100042: Event 009
+    100044: Event 010
+    100046: Event 011
+    100048: Force 001
+    100050: Particle View 001
+    100052: Particle View 002
+    100054: Position Object 001
+    100056: Position Object 006
+    100058: Position Object 007
+    100060: Position Object 008
+    100062: Render 001
+    100064: Render 005
+    100066: Render 006
+    100068: Render 007
+    100070: Rotation 001
+    100072: Shape Instance 001
+    100074: Shape Instance 005
+    100076: Shape Instance 006
+    100078: Shape Instance 007
+    100080: Speed By Surface 001
+    100082: Sphere001
+    100084: Sphere002
+    100086: Sphere003
+    100088: Sphere004
+    100090: Sphere005
+    100092: Sphere006
+    100094: Sphere007
+    100096: Sphere008
+    100098: //RootNode
+    400000: Birth 001
+    400002: Birth 005
+    400004: Birth 006
+    400006: Birth 007
+    400008: Collision 001
+    400010: Cone003
+    400012: Cylinder001
+    400014: Cylinder002
+    400016: Display 001
+    400018: Display 005
+    400020: Display 006
+    400022: Display 007
+    400024: Display 008
+    400026: Display 009
+    400028: Display 010
+    400030: Display 011
+    400032: Event 001
+    400034: Event 005
+    400036: Event 006
+    400038: Event 007
+    400040: Event 008
+    400042: Event 009
+    400044: Event 010
+    400046: Event 011
+    400048: Force 001
+    400050: Particle View 001
+    400052: Particle View 002
+    400054: Position Object 001
+    400056: Position Object 006
+    400058: Position Object 007
+    400060: Position Object 008
+    400062: Render 001
+    400064: Render 005
+    400066: Render 006
+    400068: Render 007
+    400070: Rotation 001
+    400072: Shape Instance 001
+    400074: Shape Instance 005
+    400076: Shape Instance 006
+    400078: Shape Instance 007
+    400080: Speed By Surface 001
+    400082: Sphere001
+    400084: Sphere002
+    400086: Sphere003
+    400088: Sphere004
+    400090: Sphere005
+    400092: Sphere006
+    400094: Sphere007
+    400096: Sphere008
+    400098: //RootNode
+    2100000: vaisseau
+    2100002: No Name
+    2300000: Cylinder001
+    2300002: Cylinder002
+    2300004: Sphere001
+    2300006: Sphere002
+    2300008: Sphere003
+    2300010: Sphere004
+    2300012: Sphere005
+    2300014: Sphere006
+    2300016: Sphere007
+    2300018: Sphere008
+    3300000: Cylinder001
+    3300002: Cylinder002
+    3300004: Sphere001
+    3300006: Sphere002
+    3300008: Sphere003
+    3300010: Sphere004
+    3300012: Sphere005
+    3300014: Sphere006
+    3300016: Sphere007
+    3300018: Sphere008
+    4300000: Cylinder001
+    4300002: Cylinder002
+    4300004: Sphere001
+    4300006: Sphere002
+    4300008: Sphere003
+    4300010: Sphere004
+    4300012: Sphere005
+    4300014: Sphere006
+    4300016: Sphere007
+    4300018: Sphere008
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
