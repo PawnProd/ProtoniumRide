@@ -47,13 +47,13 @@ public class LevelManager : MonoBehaviour {
     private void Awake()
     {
         Instance = this;
+        
     }
 
     private void Start()
     {
-
         ModulesPool.FillPool(storeData.LoadAvailableModules());
-        levelState = LevelState.running;
+        Pause();
         Spawn();
     }
 
@@ -61,6 +61,22 @@ public class LevelManager : MonoBehaviour {
     {
         athManager.UpdateProtoniumText(pController.NbProtonium.ToString());
         athManager.UpdateDistanceText(pController.DistanceAchieved.ToString());
+    }
+
+    public void BeginGame()
+    {
+        string name = athManager.GetPlayerName();
+   
+        if(name != "")
+        {
+            athManager.HideBeginPanel();
+            pController.playerName = name;
+            Play();
+        }
+        else
+        {
+            athManager.ShowNameInputFieldOutline();
+        }
     }
 
     /// <summary>
@@ -95,14 +111,33 @@ public class LevelManager : MonoBehaviour {
         Spawn();
     }
 
+    /// <summary>
+    /// Met en pause le jeu
+    /// </summary>
     public void Pause()
     {
         levelState = LevelState.paused;
     }
 
+    /// <summary>
+    /// Démarre/Reprend le jeu
+    /// </summary>
     public void Play()
     {
         levelState = LevelState.running;
+    }
+
+    public void ResetGame()
+    {
+
+    }
+
+    public void EndGame()
+    {
+        Pause();
+        athManager.ShowEndGamePanel();
+        athManager.UpdateScore(1000, 500);
+
     }
 }
 
