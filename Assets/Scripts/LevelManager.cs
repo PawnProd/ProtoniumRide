@@ -53,7 +53,7 @@ public class LevelManager : MonoBehaviour {
     private void Start()
     {
         ModulesPool.FillPool(storeData.LoadAvailableModules());
-        Play();
+        Pause();
         Spawn();
     }
 
@@ -63,6 +63,9 @@ public class LevelManager : MonoBehaviour {
         athManager.UpdateDistanceText(pController.DistanceAchieved.ToString());
     }
 
+    /// <summary>
+    /// Lance la partie une fois le nom entré
+    /// </summary>
     public void BeginGame()
     {
         string name = athManager.GetPlayerName();
@@ -127,11 +130,17 @@ public class LevelManager : MonoBehaviour {
         levelState = LevelState.running;
     }
 
+    /// <summary>
+    /// Reset la partie
+    /// </summary>
     public void ResetGame()
     {
 
     }
 
+    /// <summary>
+    /// Déclenche la fin de jeu
+    /// </summary>
     public void EndGame()
     {
         Pause();
