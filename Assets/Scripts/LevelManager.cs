@@ -17,7 +17,7 @@ public class LevelManager : MonoBehaviour {
     /// <summary>
     /// La position du premier module
     /// </summary>
-    public Vector3 startPosition;
+    public GameObject startPosition;
 
     /// <summary>
     /// Le décalage entre chaque module
@@ -53,7 +53,7 @@ public class LevelManager : MonoBehaviour {
     private void Start()
     {
         ModulesPool.FillPool(storeData.LoadAvailableModules());
-        Pause();
+        Play();
         Spawn();
     }
 
@@ -87,7 +87,7 @@ public class LevelManager : MonoBehaviour {
         // Au début du jeu 
         if(_currentModules.Count == 0)
         {
-            GameObject module1 = Instantiate(ModulesPool.GetRandomModule(), startPosition, Quaternion.identity);
+            GameObject module1 = Instantiate(ModulesPool.GetRandomModule(), startPosition.transform.position, Quaternion.identity);
             GameObject module2 = Instantiate(ModulesPool.GetRandomModule(), module1.transform.position + offset, Quaternion.identity);
 
             _currentModules.Add(module1);
