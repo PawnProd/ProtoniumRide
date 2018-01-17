@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour {
     /// </summary>
     private PlayerMovement pMove;
 
+    public string playerName;
+
     public int NbProtonium { get; set; }
     public float DistanceAchieved { get; set; }
 
