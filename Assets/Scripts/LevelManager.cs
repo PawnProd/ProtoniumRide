@@ -145,7 +145,8 @@ public class LevelManager : MonoBehaviour {
     {
         Pause();
         athManager.ShowEndGamePanel();
-        athManager.UpdateScore(1000, 500);
+        athManager.UpdateScore((int)pController.DistanceAchieved, pController.NbProtonium);
+        Leaderboard.SaveScoreInLeaderboard(pController.playerName, (int)pController.DistanceAchieved + pController.NbProtonium);
 
     }
 }

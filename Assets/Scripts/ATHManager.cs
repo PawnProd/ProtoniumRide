@@ -73,6 +73,8 @@ public class ATHManager : MonoBehaviour {
     public void ShowEndGamePanel()
     {
         endGamePanel.SetActive(true);
+        UpdateLeaderBoardName(Leaderboard.listScore[0].name, Leaderboard.listScore[1].name, Leaderboard.listScore[2].name);
+        UpdateLeaderBoard(Leaderboard.listScore[0].score.ToString(), Leaderboard.listScore[1].score.ToString(), Leaderboard.listScore[2].score.ToString());
     }
 
     /// <summary>
