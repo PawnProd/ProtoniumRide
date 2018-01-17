@@ -34,15 +34,17 @@ public class LevelManager : MonoBehaviour {
     /// </summary>
     public StorageData storeData;
 
+    /// <summary>
+    /// L'état du niveau
+    /// </summary>
     public LevelState levelState;
-
-    public GameObject testModule;
-    
 
     /// <summary>
     /// La liste des modules spawn
     /// </summary>
     private List<GameObject> _currentModules = new List<GameObject>();
+
+    private bool endGame;
 
     private void Awake()
     {
@@ -52,6 +54,7 @@ public class LevelManager : MonoBehaviour {
 
     private void Start()
     {
+        endGame = false;
         ModulesPool.FillPool(storeData.LoadAvailableModules());
         Pause();
         Spawn();
@@ -59,8 +62,16 @@ public class LevelManager : MonoBehaviour {
 
     private void Update()
     {
-        athManager.UpdateProtoniumText(pController.NbProtonium.ToString());
-        athManager.UpdateDistanceText(pController.DistanceAchieved.ToString());
+        if(!pController.isDead)
+        {
+            athManager.UpdateProtoniumText(pController.NbProtonium.ToString());
+            athManager.UpdateDistanceText(pController.DistanceAchieved.ToString());
+        }
+        else if(!endGame)
+        {
+            endGame = true;
+            EndGame();
+        }
     }
 
     /// <summary>

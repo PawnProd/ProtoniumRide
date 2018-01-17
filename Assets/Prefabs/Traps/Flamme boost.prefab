@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4277430012225422}
   - component: {fileID: 198829641558179036}
   - component: {fileID: 199407574526012918}
+  - component: {fileID: 65193971146539312}
+  - component: {fileID: 114657236747652114}
   m_Layer: 0
   m_Name: Flamme
   m_TagString: Untagged
@@ -101,6 +103,29 @@ Transform:
   m_Father: {fileID: 4024377149407990}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65193971146539312
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440222528692410}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.52, y: 0.66, z: 4.61}
+  m_Center: {x: -0.0000004768372, y: 0.000000029802322, z: 2.2528505}
+--- !u!114 &114657236747652114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440222528692410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e72ab593741af6c40a0f2e48e254e937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198614110371901580
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -161,7 +186,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 150740703
+  randomSeed: 415778843
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3534,7 +3559,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 530594606
+  randomSeed: 1676693748
   InitialModule:
     serializedVersion: 3
     enabled: 1
