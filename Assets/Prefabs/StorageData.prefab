@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1535611022127446}
+  m_IsPrefabParent: 1
+--- !u!1 &1535611022127446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4733146463049212}
+  - component: {fileID: 114277024577060880}
+  m_Layer: 0
+  m_Name: StorageData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4733146463049212
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1535611022127446}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.23611, y: -8.442657, z: 56.44553}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114277024577060880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1535611022127446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c9c9a178d5c1b4d90527ffe1783b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moduleTest: {fileID: 1088960245936136, guid: 1243b04d03c524c4ca853b7bd3ed2389, type: 2}
+  allModules:
+  - id: 0
+    module: {fileID: 1123845188159740, guid: 6aa4f563a07b41d4f81b4ae7fc3cde48, type: 2}
+  - id: 1
+    module: {fileID: 1123845188159740, guid: 6aa4f563a07b41d4f81b4ae7fc3cde48, type: 2}
+  - id: 2
+    module: {fileID: 1123845188159740, guid: 6aa4f563a07b41d4f81b4ae7fc3cde48, type: 2}
+  - id: 2
+    module: {fileID: 1123845188159740, guid: 6aa4f563a07b41d4f81b4ae7fc3cde48, type: 2}
