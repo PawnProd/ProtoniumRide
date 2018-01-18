@@ -3,61 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AchatPanel : MonoBehaviour {
+[CreateAssetMenu(fileName = "New Achat Object")]
+public class AchatPanel : ScriptableObject {
+
+    /// <summary>
+    /// L'id de référence au gameobject
+    /// </summary>
+    public int id;
 
     /// <summary>
     /// L'image représentant l'objet
     /// </summary>
-    public Image objImg;
+    public Sprite objImg;
+
+    /// <summary>
+    /// La catégorie de l'objet
+    /// </summary>
+    public CategorieAchat categorie;
 
     /// <summary>
     /// L'image de la catégorie de l'objet
     /// </summary>
-    public Image categorieImg;
+    public Sprite categorieImg;
 
     /// <summary>
     /// Le nom de l'objet
     /// </summary>
-    public Text objName;
+    public string objName;
 
     /// <summary>
     /// Le prix de l'objet
     /// </summary>
-    public Text objPrice;
+    public int objPrice;
 
     /// <summary>
-    /// Change l'image de l'objet dans le shop
+    /// Détermine si l'objet a été acheté ou non
     /// </summary>
-    /// <param name="objSprite"> La nouvelle image de l'objet</param>
-	public void SetObjImg(Sprite objSprite)
-    {
-        objImg.sprite = objSprite;
-    }
+    public bool isBuy;
 
-    /// <summary>
-    /// Change l'image de la catégorie de l'objet dans le shop
-    /// </summary>
-    /// <param name="categorieSprite"> La nouvelle image de la catégorie</param>
-    public void SetCategorieImg(Sprite categorieSprite)
-    {
-        categorieImg.sprite = categorieSprite;
-    }
+}
 
-    /// <summary>
-    /// Change le nom de l'objet dans le shop
-    /// </summary>
-    /// <param name="name"> Le nouveau nom de l'objet</param>
-    public void SetObjName(string name)
-    {
-        objName.text = name;
-    }
-
-    /// <summary>
-    /// Change le prix de l'objet dans le shop
-    /// </summary>
-    /// <param name="price"> Le nouveau prix de l'objet</param>
-    public void SetObjPrice(string price)
-    {
-        objPrice.text = price;
-    }
+public enum CategorieAchat
+{
+    module,
+    cosmetique,
+    ressource,
+    vfx
 }

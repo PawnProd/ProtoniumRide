@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 224501939082645870}
   - component: {fileID: 222371975471768984}
   - component: {fileID: 114459522109929700}
-  - component: {fileID: 114657368082769728}
+  - component: {fileID: 114056898115687926}
   m_Layer: 5
   m_Name: Achat_Panel
   m_TagString: Untagged
@@ -116,6 +116,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114056898115687926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1736445893295804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f86154d0b2fd8f14399236068e9fd934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objImg: {fileID: 114611674432336878}
+  categorieImg: {fileID: 114089620204259316}
+  objName: {fileID: 114971978076339934}
+  objPrice: {fileID: 114196004175567046}
 --- !u!114 &114065336742787008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -312,21 +327,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114657368082769728
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1736445893295804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e128703e11b3e44b87c2e0b6b181522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objImg: {fileID: 114611674432336878}
-  categorieImg: {fileID: 114089620204259316}
-  objName: {fileID: 114971978076339934}
-  objPrice: {fileID: 114196004175567046}
 --- !u!114 &114971978076339934
 MonoBehaviour:
   m_ObjectHideFlags: 1
