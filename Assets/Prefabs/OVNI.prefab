@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 4306159893771992}
   - component: {fileID: 198835714847880112}
   - component: {fileID: 199619487452984602}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SphereParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,8 +57,24 @@ GameObject:
   - component: {fileID: 4346987962602386}
   - component: {fileID: 198847014514221472}
   - component: {fileID: 199760733365045392}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Smoke2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1111869426250942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4378529926666974}
+  - component: {fileID: 108952367179968300}
+  m_Layer: 0
+  m_Name: Point light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +90,7 @@ GameObject:
   - component: {fileID: 4802494629742798}
   - component: {fileID: 198909744764926018}
   - component: {fileID: 199819749960182010}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: FragmentParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,6 +216,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1410502567100772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4574480893470862}
+  - component: {fileID: 108549951516414254}
+  m_Layer: 0
+  m_Name: Point light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1492359607033262
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +240,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4368618984406348}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PS_CartoonBoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +272,7 @@ GameObject:
   - component: {fileID: 4411634564654466}
   - component: {fileID: 198258818575435910}
   - component: {fileID: 199318612201147568}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Boom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4430036095042796}
   - component: {fileID: 108970606975204940}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +339,7 @@ GameObject:
   - component: {fileID: 4000494412200866}
   - component: {fileID: 198422611338055154}
   - component: {fileID: 199534804910901444}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Smoke1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +356,7 @@ GameObject:
   - component: {fileID: 4973565757115322}
   - component: {fileID: 198249723578890330}
   - component: {fileID: 199219600643658916}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BeamLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,6 +470,8 @@ Transform:
   m_Children:
   - {fileID: 4771156189265606}
   - {fileID: 4368618984406348}
+  - {fileID: 4574480893470862}
+  - {fileID: 4378529926666974}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -480,6 +514,19 @@ Transform:
   - {fileID: 4411634564654466}
   m_Father: {fileID: 4301320187783510}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4378529926666974
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1111869426250942}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.05, z: -5.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4301320187783510}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4404742676625922
 Transform:
@@ -537,6 +584,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4771156189265606}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4574480893470862
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1410502567100772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.05, z: 7.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4301320187783510}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4577151874190012
 Transform:
@@ -1037,6 +1097,78 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1180182718753220}
   m_Mesh: {fileID: 4300004, guid: 7529817c94a38444497eb9533dc0be56, type: 3}
+--- !u!108 &108549951516414254
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1410502567100772}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 0.9933063, b: 0.75735295, a: 1}
+  m_Intensity: 2
+  m_Range: 15
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!108 &108952367179968300
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1111869426250942}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 0.9933063, b: 0.75735295, a: 1}
+  m_Intensity: 2
+  m_Range: 15
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!108 &108970606975204940
 Light:
   m_ObjectHideFlags: 1

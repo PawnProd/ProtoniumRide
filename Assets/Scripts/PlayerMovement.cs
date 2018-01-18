@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour {
     /// <summary>
     /// La distance entre chaque lane
     /// </summary>
-    private const float LANE_DISTANCE = 3.0f;
+    private const float LANE_DISTANCE = 2.7f;
 
     /// <summary>
     /// La vitesse de déplacement du player

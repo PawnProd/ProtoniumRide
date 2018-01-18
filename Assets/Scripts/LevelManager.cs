@@ -57,8 +57,8 @@ public class LevelManager : MonoBehaviour {
     {
         endGame = false;
         ModulesPool.FillPool(storeData.LoadAvailableModules());
-        Pause();
-        Spawn();
+        Play();
+       // Spawn();
     }
 
     private void Update()
