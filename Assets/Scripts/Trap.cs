@@ -18,7 +18,6 @@ public class Trap : MonoBehaviour {
         if(Vector3.Distance(cameraPlayer.transform.position, transform.position) < 10)
         {
             Material material = GetComponent<Renderer>().material;
-            print("Coucou");
             GetComponent<Renderer>().material.SetFloat("_Mode", 2);
             material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
             material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
