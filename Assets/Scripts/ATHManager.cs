@@ -45,8 +45,14 @@ public class ATHManager : MonoBehaviour {
     /// </summary>
     public Text nameField;
 
+    /// <summary>
+    /// Le panneau de début de jeu
+    /// </summary>
     public GameObject beginPanel;
 
+    /// <summary>
+    /// L'inputField du nom du joueur
+    /// </summary>
     public InputField playerName;
 
     /// <summary>
