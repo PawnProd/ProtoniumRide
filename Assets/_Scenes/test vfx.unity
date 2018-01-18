@@ -295,6 +295,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 65287144586250592, guid: 75110e1cba591b14083d236c9d4c04d0,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 77.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75110e1cba591b14083d236c9d4c04d0, type: 2}
   m_IsPrefabParent: 0
