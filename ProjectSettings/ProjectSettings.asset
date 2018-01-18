@@ -161,9 +161,9 @@ PlayerSettings:
     Android: com.Pawnproduction.ProtoniumRideTest
   buildNumber: {}
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 21
+  AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
-  AndroidPreferredInstallLocation: 1
+  AndroidPreferredInstallLocation: 2
   aotOptions: 
   stripEngineCode: 1
   iPhoneStrippingLevel: 0

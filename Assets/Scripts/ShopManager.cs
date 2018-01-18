@@ -36,6 +36,11 @@ public class ShopManager : MonoBehaviour {
     public GameObject panelConfirm;
 
     /// <summary>
+    /// Le panel contenant la money
+    /// </summary>
+    public ProtoniumMoney protoniumMoney;
+
+    /// <summary>
     /// La page actuelle
     /// </summary>
     private int _currentPage;
@@ -58,7 +63,9 @@ public class ShopManager : MonoBehaviour {
     /// </summary>
     public void LoadShopModule()
     {
+        CleanShop();
         int nbModule = 0;
+        _currentPage = 0;
         GameObject newPanel = CreatePanelAchat();
         foreach (AchatPanel achat in listShopModule)
         {
@@ -77,8 +84,27 @@ public class ShopManager : MonoBehaviour {
                 ++nbModule;
                 GameObject achatModule = Instantiate(achatPrefab, newPanel.transform);
                 achatModule.GetComponent<AchatDisplay>().Display(achat.objImg, achat.categorieImg, achat.objName, achat.objPrice.ToString());
-                achatModule.transform.GetChild(0).GetComponent<Button>().onClick.AddListener(delegate () { ShowConfirmPanel(achat.id);  });
+                if(protoniumMoney.money >= achat.objPrice)
+                {
+                    achatModule.transform.GetChild(0).GetComponent<Button>().onClick.AddListener(delegate () { ShowConfirmPanel(achat); });
+                }
+                else
+                {
+                    achatModule.transform.GetChild(0).GetComponent<Button>().interactable = false;
+                }
+                
             }
+        }
+    }
+
+    /// <summary>
+    /// Supprime tous les éléments du magasin
+    /// </summary>
+    public void CleanShop()
+    {
+        foreach(Transform child in modulePanel.transform)
+        {
+            Destroy(child.gameObject);
         }
     }
 
@@ -88,9 +114,10 @@ public class ShopManager : MonoBehaviour {
     /// <returns>Le panel achat créé</returns>
     public GameObject CreatePanelAchat()
     {
-        GameObject newPanel = new GameObject("Panel_Achat", typeof(RectTransform), typeof(VerticalLayoutGroup));
-
-        newPanel.layer = 5;
+        GameObject newPanel = new GameObject("Panel_Achat", typeof(RectTransform), typeof(VerticalLayoutGroup))
+        {
+            layer = 5
+        };
 
         // On setup le rectTransform
         RectTransform rectTransform = newPanel.GetComponent<RectTransform>();
@@ -121,16 +148,29 @@ public class ShopManager : MonoBehaviour {
     /// Affiche le panel de confirmation
     /// </summary>
     /// <param name="id"></param>
-    public void ShowConfirmPanel(int id)
+    public void ShowConfirmPanel(AchatPanel achat)
     {
-        _idModuleToBuy = id;
         panelConfirm.SetActive(true);
-        
+        panelConfirm.GetComponentInChildren<Button>().onClick.AddListener(delegate () { BuyModule(achat); });
     }
 
-    public void BuyModule()
+    public void BuyModule(AchatPanel achat)
     {
-        print("Vous venez d'acheter le module " + _idModuleToBuy);
+        print("Vous venez d'acheter le module " + achat.id + " au prix de " + achat.objPrice);
+        // On sauvegarde le module dans le fichier et dans la liste des modules disponibles
+        StorageData.SetPath();
+        StorageData.SaveModule(achat.id);
+
+        // On soustrait à notre réserve de protonium le prix de l'objet
+        int money = protoniumMoney.money - achat.objPrice;
+        protoniumMoney.SaveProtoniumMoney(money);
+        protoniumMoney.protoText.text = money.ToString();
+
+        // On tag le module comme étant acheté
+        int index = listShopModule.FindIndex(x => x == achat);
+        listShopModule[index].isBuy = true;
+
+        LoadShopModule();
     }
 
     /// <summary>

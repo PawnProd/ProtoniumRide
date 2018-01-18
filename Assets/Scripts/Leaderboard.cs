@@ -72,7 +72,7 @@ public class Leaderboard : MonoBehaviour {
         if (File.Exists(_path))
         {
             print("Existe déjà !");
-            FileStream file = File.Open(_path, FileMode.OpenOrCreate);
+            FileStream file = File.Open(_path, FileMode.Open);
             bf.Serialize(file, listScore);
             file.Close();
         }

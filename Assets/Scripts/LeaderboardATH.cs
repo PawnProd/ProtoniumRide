@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class LeaderboardATH : MonoBehaviour {
 
+    /// <summary>
+    /// La liste des lignes du tableau
+    /// </summary>
     public List<LeaderBoardLine> leaderboard;
 
     private void Awake()
@@ -12,6 +15,9 @@ public class LeaderboardATH : MonoBehaviour {
         Leaderboard.LoadLeaderboardList();
     }
 
+    /// <summary>
+    /// Update le leaderboard
+    /// </summary>
     public void UpdateLeaderboard()
     {
         int i = 0;

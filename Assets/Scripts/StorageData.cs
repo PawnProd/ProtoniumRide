@@ -6,9 +6,7 @@ using UnityEngine;
 
 public class StorageData : MonoBehaviour {
 
-    public GameObject moduleTest;
-
-    private string filePath;
+    private static string filePath;
 
     [System.Serializable]
     public struct DataModule
@@ -19,28 +17,29 @@ public class StorageData : MonoBehaviour {
 
     public List<DataModule> allModules;
 
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
+        SetPath();
+    }
 
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            filePath = Application.persistentDataPath + "/AvailableModules.txt";
-        }
-        else
-        {
-            filePath = Application.persistentDataPath + "/AvailableModules.txt";
-        }
+    // Use this for initialization
+    void Start () {
+
+        
 
         if(!File.Exists(filePath))
         {
             print(filePath);
             new FileStream(filePath, FileMode.Append).Dispose();
-            
+
+            // Les modules de bases
+            SaveModule(0);
+            SaveModule(1);
+            SaveModule(2);
+            SaveModule(3);
         }
 
-        SaveModule(0);
-        SaveModule(1);
-        SaveModule(2);
+
 
     }
 	
@@ -69,6 +68,11 @@ public class StorageData : MonoBehaviour {
         
     }
 
+    /// <summary>
+    /// Récupère la data en fonction de l'id
+    /// </summary>
+    /// <param name="id"> L'id du module à récupérer</param>
+    /// <returns>La data du module</returns>
     public DataModule SearchDataModuleWithId(int id)
     {
         return allModules.Find(x => x.id == id);
@@ -78,10 +82,15 @@ public class StorageData : MonoBehaviour {
     /// Enregistre un id correspondant à un module dans AvailableModules.txt
     /// </summary>
     /// <param name="id">L'id du module</param>
-    public void SaveModule(int id)
+    public static void SaveModule(int id)
     {
         StreamWriter writer = new StreamWriter(filePath, true);
         writer.WriteLine(id.ToString());
         writer.Dispose();
+    }
+
+    public static void SetPath()
+    {
+        filePath = Application.persistentDataPath + "/AvailableModules.txt";
     }
 }

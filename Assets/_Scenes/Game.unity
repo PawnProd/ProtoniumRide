@@ -1240,6 +1240,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1003968099962470, guid: d4572a3b38c1c2f4c9b0bd46570b0fa2,
         type: 2}
+    - target: {fileID: 114277024577060880, guid: 9771b580c203f3b4eb9e06519f78bc35,
+        type: 2}
+      propertyPath: allModules.Array.data[3].id
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9771b580c203f3b4eb9e06519f78bc35, type: 2}
   m_IsPrefabParent: 0

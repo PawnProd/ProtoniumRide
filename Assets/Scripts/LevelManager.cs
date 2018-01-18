@@ -168,6 +168,7 @@ public class LevelManager : MonoBehaviour {
         athManager.UpdateName(pController.playerName);
         athManager.UpdateRessource(pController.NbProtonium.ToString());
         Leaderboard.SaveScoreInLeaderboard(pController.playerName, (int)pController.DistanceAchieved + pController.NbProtonium);
+        PlayerPrefs.SetInt("Protonium", PlayerPrefs.GetInt("Protonium") + pController.NbProtonium);
     }
 }
 
