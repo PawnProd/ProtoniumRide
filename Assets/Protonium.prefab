@@ -37,6 +37,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4281125689848594}
   - component: {fileID: 95761196152795784}
+  - component: {fileID: 135278345485629988}
+  - component: {fileID: 114636991127327628}
   m_Layer: 0
   m_Name: Protonium
   m_TagString: Untagged
@@ -224,8 +226,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1116958650097956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102.81764, y: 7.4309983, z: -215.65825}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -73.513, y: 36.838, z: -74.585}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 4053602726531284}
   - {fileID: 4379948677407746}
@@ -648,3 +650,26 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114636991127327628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116958650097956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb214b8858108048810c1a70d84e253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &135278345485629988
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116958650097956}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.98
+  m_Center: {x: 0, y: 0, z: 0}
