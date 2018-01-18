@@ -37,6 +37,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4483702772119406}
   - component: {fileID: 95408611576244442}
+  - component: {fileID: 114916859145465042}
+  - component: {fileID: 65562864067112654}
   m_Layer: 0
   m_Name: porte_verticale_droit
   m_TagString: Untagged
@@ -51,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1300787644078176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -21.5}
+  m_LocalPosition: {x: -173.35129, y: 33.281284, z: 86.74926}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4580523706661794}
@@ -112,6 +114,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1015797560314342}
   m_Mesh: {fileID: 4300000, guid: 244eaca1d58169b40b1c992ea882b93b, type: 3}
+--- !u!65 &65562864067112654
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1300787644078176}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9, y: 9.68, z: 6.34}
+  m_Center: {x: -101.5, y: 5.44, z: 1.82}
 --- !u!95 &95408611576244442
 Animator:
   serializedVersion: 3
@@ -129,3 +143,14 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114916859145465042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1300787644078176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e72ab593741af6c40a0f2e48e254e937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
