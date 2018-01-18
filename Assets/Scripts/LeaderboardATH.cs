@@ -7,7 +7,12 @@ public class LeaderboardATH : MonoBehaviour {
 
     public List<LeaderBoardLine> leaderboard;
 
-	public void UpdateLeaderboard()
+    private void Awake()
+    {
+        Leaderboard.LoadLeaderboardList();
+    }
+
+    public void UpdateLeaderboard()
     {
         int i = 0;
         while(i < Leaderboard.listScore.Count)

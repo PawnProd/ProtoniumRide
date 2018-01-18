@@ -73,34 +73,57 @@ public class ATHManager : MonoBehaviour {
     public void ShowEndGamePanel()
     {
         endGamePanel.SetActive(true);
-        UpdateLeaderBoardName(Leaderboard.listScore[0].name, Leaderboard.listScore[1].name, Leaderboard.listScore[2].name);
-        UpdateLeaderBoard(Leaderboard.listScore[0].score.ToString(), Leaderboard.listScore[1].score.ToString(), Leaderboard.listScore[2].score.ToString());
+        for(int i = 0; i < Leaderboard.listScore.Count; ++i)
+        {
+            UpdateLeaderBoardName(i+1, Leaderboard.listScore[i].name);
+            UpdateLeaderBoard(i+1, Leaderboard.listScore[i].score.ToString());
+        }
+       
+     
     }
 
     /// <summary>
     /// Update le nom des trois premiers joueurs du leaderboard
     /// </summary>
-    /// <param name="namelead1"> Le nom du 1er du leaderboard</param>
-    /// <param name="namelead2">Le nom du 2e du leaderboard</param>
-    /// <param name="namelead3">Le nom du 3e du leaderboard</param>
-    public void UpdateLeaderBoardName(string namelead1, string namelead2, string namelead3)
+    /// <param name="position"> La position dans le leaderboard </param>
+    /// <param name="namelead1"> Le nom du joueur </param>
+
+    public void UpdateLeaderBoardName(int position, string namelead)
     {
-        name1.text = namelead1;
-        name2.text = namelead2;
-        name3.text = namelead3;
+        switch(position)
+        {
+            case 1:
+                name1.text = namelead;
+                break;
+            case 2:
+                name2.text = namelead;
+                break;
+            case 3:
+                name3.text = namelead;
+                break;
+        }
     }
 
     /// <summary>
     /// Update le score des trois premiers joueurs du leaderboard
     /// </summary>
-    /// <param name="scorelead1"> Le score du 1er du leaderboard</param>
-    /// <param name="scorelead2"> Le score du 2e du leaderboard</param>
-    /// <param name="scorelead3"> Le score du 3e du leaderboard</param>
-    public void UpdateLeaderBoard(string scorelead1, string scorelead2, string scorelead3)
+    /// <param name="position"> La position dans le leaderboard </param>
+    /// <param name="scorelead1"> Le score du joueur</param>
+
+    public void UpdateLeaderBoard(int position, string scorelead)
     {
-        score1.text = scorelead1;
-        score2.text = scorelead2;
-        score3.text = scorelead3;
+        switch (position)
+        {
+            case 1:
+                score1.text = scorelead;
+                break;
+            case 2:
+                score2.text = scorelead;
+                break;
+            case 3:
+                score3.text = scorelead;
+                break;
+        }
     }
 
     /// <summary>
@@ -129,7 +152,7 @@ public class ATHManager : MonoBehaviour {
     /// <param name="nbRessource"> Protonium amassé</param>
     public void UpdateRessource(string nbRessource)
     {
-        ressource.text = nbRessource;
+        ressource.text = "+" + nbRessource;
     }
 
     /// <summary>
@@ -150,7 +173,7 @@ public class ATHManager : MonoBehaviour {
             score.text = currentScore + " +" + ressource;
             yield return new WaitForSeconds(0.01f);
         }
-
+        score.text = currentScore + " +" + ressource;
         yield return null;
     }
 

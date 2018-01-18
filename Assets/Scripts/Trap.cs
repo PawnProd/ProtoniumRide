@@ -18,7 +18,7 @@ public class Trap : MonoBehaviour {
     {
         if(other.tag == "Player")
         {
-            other.GetComponent<PlayerController>().isDead = true;
+            other.GetComponent<PlayerController>().KillPlayer();
         }
     }
 }

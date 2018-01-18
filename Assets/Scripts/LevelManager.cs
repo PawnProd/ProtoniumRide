@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
@@ -146,7 +147,7 @@ public class LevelManager : MonoBehaviour {
     /// </summary>
     public void ResetGame()
     {
-
+        SceneManager.LoadScene("Game");
     }
 
     /// <summary>
@@ -155,10 +156,18 @@ public class LevelManager : MonoBehaviour {
     public void EndGame()
     {
         Pause();
+        StartCoroutine(ShowEnd());
+
+    }
+
+    IEnumerator ShowEnd()
+    {
+        yield return new WaitForSeconds(4);
         athManager.ShowEndGamePanel();
         athManager.UpdateScore((int)pController.DistanceAchieved, pController.NbProtonium);
+        athManager.UpdateName(pController.playerName);
+        athManager.UpdateRessource(pController.NbProtonium.ToString());
         Leaderboard.SaveScoreInLeaderboard(pController.playerName, (int)pController.DistanceAchieved + pController.NbProtonium);
-
     }
 }
 

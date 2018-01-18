@@ -29,6 +29,16 @@ public class PlayerController : MonoBehaviour {
     /// </summary>
     public bool isDead;
 
+    /// <summary>
+    /// Le système de particule concernant la mort du joueur
+    /// </summary>
+    public GameObject deadParticule;
+
+    /// <summary>
+    /// Le gameobject contenant les mesh du player
+    /// </summary>
+    public GameObject mesh;
+
 	// Use this for initialization
 	void Start () {
         pMove = GetComponent<PlayerMovement>();
@@ -61,4 +71,12 @@ public class PlayerController : MonoBehaviour {
         }
       
 	}
+
+    // Tue le joueur et déclenche la particule de mort
+    public void KillPlayer()
+    {
+        isDead = true;
+        mesh.SetActive(false);
+        deadParticule.SetActive(true);
+    }
 }

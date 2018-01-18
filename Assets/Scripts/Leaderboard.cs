@@ -9,16 +9,23 @@ public class Leaderboard : MonoBehaviour {
     /// <summary>
     /// La liste des scores stockés sur le fichier
     /// </summary>
-    public static List<ScoreLeaderboard> listScore;
+    public static List<ScoreLeaderboard> listScore = new List<ScoreLeaderboard>();
 
     /// <summary>
     /// Le chemin d'accès vers le fichier de score
     /// </summary>
     private static string _path = Application.persistentDataPath + "/leaderboard.dat";
 
-   /// <summary>
-   /// Structure des scores du leaderboard
-   /// </summary>
+    /// <summary>
+    /// Détermine si le ficher de leaderboard a déjà été chargé
+    /// </summary>
+    private static bool alreadyLoad = false;
+
+
+    /// <summary>
+    /// Structure des scores du leaderboard
+    /// </summary>
+    [System.Serializable]
     public struct ScoreLeaderboard
     {
         public int position;
@@ -31,8 +38,10 @@ public class Leaderboard : MonoBehaviour {
     /// </summary>
 	public static void LoadLeaderboardList()
     {
-        if(File.Exists(_path))
+        if(File.Exists(_path) && !alreadyLoad)
         {
+            print("Coucou 2 !");
+            alreadyLoad = true;
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(_path, FileMode.Open);
             listScore = (List<ScoreLeaderboard>)bf.Deserialize(file);
@@ -48,7 +57,8 @@ public class Leaderboard : MonoBehaviour {
     /// <param name="score"> Le score du joueur</param>
     public static void SaveScoreInLeaderboard(string playerName, int score)
     {
-        int position = listScore.FindLast(x => x.score > score).position;
+        int position = SearchPosition(score);
+        
         ScoreLeaderboard newScore = new ScoreLeaderboard
         {
             position = position,
@@ -56,13 +66,43 @@ public class Leaderboard : MonoBehaviour {
             score = score
         };
 
+        print(position);
         listScore.Insert(position, newScore);
-
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Open(_path, FileMode.Create);
-        bf.Serialize(file, listScore);
-        file.Close();
+        if (File.Exists(_path))
+        {
+            print("Existe déjà !");
+            FileStream file = File.Open(_path, FileMode.OpenOrCreate);
+            bf.Serialize(file, listScore);
+            file.Close();
+        }
+        else
+        {
+            print("Coucou");
+            FileStream file = File.Create(_path);
+            bf.Serialize(file, listScore);
+            file.Close();
+        }
 
+       
+
+    }
+
+    public static int SearchPosition(int score)
+    {
+        int i = 0;
+
+        if(listScore.Count == 0)
+        {
+            return 0;
+        }
+
+        while(i < listScore.Count && listScore[i].score > score)
+        {
+            ++i;
+        }
+
+        return i;
     }
 }
 
