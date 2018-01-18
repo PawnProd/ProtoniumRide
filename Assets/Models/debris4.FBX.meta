@@ -1,49 +1,19 @@
 fileFormatVersion: 2
-guid: 15e25001c5f4050489c5aba00600277e
-timeCreated: 1516224080
+guid: 25c447860eb795d48bf0dec445a7a856
+timeCreated: 1516276154
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Cylinder010
-    100002: Cylinder011
-    100004: Cylinder012
-    100006: Cylinder013
-    100008: Cylinder014
-    100010: Cylinder015
-    100012: Cylinder016
-    100014: //RootNode
-    400000: Cylinder010
-    400002: Cylinder011
-    400004: Cylinder012
-    400006: Cylinder013
-    400008: Cylinder014
-    400010: Cylinder015
-    400012: Cylinder016
-    400014: //RootNode
-    2100000: "tete fus\xE9"
-    2100002: 13 - Default
-    2300000: Cylinder010
-    2300002: Cylinder011
-    2300004: Cylinder012
-    2300006: Cylinder013
-    2300008: Cylinder014
-    2300010: Cylinder015
-    2300012: Cylinder016
-    3300000: Cylinder010
-    3300002: Cylinder011
-    3300004: Cylinder012
-    3300006: Cylinder013
-    3300008: Cylinder014
-    3300010: Cylinder015
-    3300012: Cylinder016
-    4300000: Cylinder010
-    4300002: Cylinder011
-    4300004: Cylinder012
-    4300006: Cylinder013
-    4300008: Cylinder014
-    4300010: Cylinder015
-    4300012: Cylinder016
+    100000: //RootNode
+    400000: //RootNode
+    2100000: antenne
+    2100002: corp satelite
+    2100004: 08 - Default
+    2100006: ecrous
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Box002
     9500000: //RootNode
   externalObjects: {}
   materials:
