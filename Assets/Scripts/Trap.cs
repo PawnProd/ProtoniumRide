@@ -18,9 +18,10 @@ public class Trap : MonoBehaviour {
         if(Vector3.Distance(cameraPlayer.transform.position, transform.position) < 10)
         {
             Material material = GetComponent<Renderer>().material;
-            if(material != null)
+            if(material != null && material.HasProperty("_Color"))
             {
-                GetComponent<Renderer>().material.SetFloat("_Mode", 2);
+                
+                material.SetFloat("_Mode", 2);
                 material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
                 material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
                 material.SetInt("_ZWrite", 0);
@@ -28,7 +29,19 @@ public class Trap : MonoBehaviour {
                 material.EnableKeyword("_ALPHABLEND_ON");
                 material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
                 material.renderQueue = 3000;
-                GetComponent<Renderer>().material.SetColor("_Color", new Color(GetComponent<Renderer>().material.color.r, GetComponent<Renderer>().material.color.g, GetComponent<Renderer>().material.color.b, 0.7f));
+                Color color = material.GetColor("_Color");
+                color.a = 0.5f;
+                material.SetColor("_Color", color);
+
+                print("--------------------------------------- DEBUG TRANSPARENCY--------------------------------------");
+                print("Mode = " + material.GetFloat("_Mode"));
+                print("SrcBlend = " + material.GetInt("_SrcBlend"));
+                print("DstBlend = " + material.GetInt("_DstBlend"));
+                print("ZWrite = " + material.GetInt("_ZWrite"));
+                print("Color = " + material.GetColor("_Color"));
+                print("------------------------------------------------------------------------------------------------");
+                //GetComponent<Renderer>().material.SetColor("_Color", new Color(GetComponent<Renderer>().material.color.r, GetComponent<Renderer>().material.color.g, GetComponent<Renderer>().material.color.b, 0.5f));
+
             }
         }
 	}
