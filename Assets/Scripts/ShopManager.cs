@@ -67,6 +67,7 @@ public class ShopManager : MonoBehaviour {
         int nbModule = 0;
         _currentPage = 0;
         GameObject newPanel = CreatePanelAchat();
+        SetBuyingModules();
         foreach (AchatPanel achat in listShopModule)
         {
             if(nbModule == 4)
@@ -93,6 +94,24 @@ public class ShopManager : MonoBehaviour {
                     achatModule.transform.GetChild(0).GetComponent<Button>().interactable = false;
                 }
                 
+            }
+        }
+    }
+
+    /// <summary>
+    /// Retire les produits achetés du magasin
+    /// </summary>
+    public void SetBuyingModules()
+    {
+        List<int> allId = StorageData.GetAllIdAvailable();
+
+        foreach(int id in allId)
+        {
+            print(id);
+            int index = listShopModule.FindIndex(x => x.id == id);
+            if(index != -1)
+            {
+                listShopModule[index].isBuy = true;
             }
         }
     }

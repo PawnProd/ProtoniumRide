@@ -35,8 +35,7 @@ public class StorageData : MonoBehaviour {
             // Les modules de bases
             SaveModule(0);
             SaveModule(1);
-            SaveModule(2);
-            SaveModule(3);
+            SaveModule(4);
         }
 
 
@@ -69,6 +68,25 @@ public class StorageData : MonoBehaviour {
     }
 
     /// <summary>
+    /// Récupère tous les ID des modules disponibles
+    /// </summary>
+    /// <returns> les ID des modules disponibles</returns>
+    public static List<int> GetAllIdAvailable()
+    {
+        SetPath();
+        List<int> availableId = new List<int>();
+        StreamReader reader = new StreamReader(filePath);
+        string line;
+        while ((line = reader.ReadLine()) != null)
+        {
+            availableId.Add(int.Parse(line));
+        }
+        reader.Close();
+        return availableId;
+
+    }
+
+    /// <summary>
     /// Récupère la data en fonction de l'id
     /// </summary>
     /// <param name="id"> L'id du module à récupérer</param>
@@ -91,6 +109,9 @@ public class StorageData : MonoBehaviour {
 
     public static void SetPath()
     {
-        filePath = Application.persistentDataPath + "/AvailableModules.txt";
+        if(filePath == null)
+        {
+            filePath = Application.persistentDataPath + "/AvailableModules.txt";
+        }
     }
 }
