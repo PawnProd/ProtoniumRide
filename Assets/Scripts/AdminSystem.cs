@@ -28,6 +28,11 @@ public class AdminSystem : MonoBehaviour {
     /// </summary>
     private int _countTap;
 
+    /// <summary>
+    /// Temps avant reset du countTap
+    /// </summary>
+    private float _timer = 0;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -35,10 +40,17 @@ public class AdminSystem : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        _timer += Time.deltaTime;
+        if(_timer > 1.5f)
+        {
+            _countTap = 0;
+        }
+
 		if(MobileInput.Instance.Tap && !adminPanel.activeSelf)
         {
-            print("Coucou");
             ++_countTap;
+            _timer = 0;
             
         }
 

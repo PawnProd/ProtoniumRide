@@ -18,6 +18,13 @@ public class Trap : MonoBehaviour {
 	void Update () {
 		
         // On test si la caméra est proche de l'objet
+        if(gameObject.name == "Porte_Haut")
+        {
+            if (Vector3.Distance(cameraPlayer.transform.position, transform.position) < 20)
+            {
+                Destroy(gameObject);
+            }
+        }
         if(Vector3.Distance(cameraPlayer.transform.position, transform.position) < 10)
         {
             Destroy(gameObject);

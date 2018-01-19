@@ -6955,6 +6955,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 452ab73293862a04798618d6561a32a1, type: 2}
   - {fileID: 11400000, guid: 5648aef1dbd113a42bc7b6b36a201478, type: 2}
   - {fileID: 11400000, guid: 17886f5e98048e445a30f09fa9e0f660, type: 2}
+  - {fileID: 11400000, guid: 7f92bfe1352228a4f83b3ecf3bdd8f45, type: 2}
+  - {fileID: 11400000, guid: 7d950a54e4630d744b1399104253bdf5, type: 2}
   modulePanel: {fileID: 54001398}
   achatPrefab: {fileID: 1736445893295804, guid: 1ffed4da7d6d2394683a72c09be614f2,
     type: 2}
