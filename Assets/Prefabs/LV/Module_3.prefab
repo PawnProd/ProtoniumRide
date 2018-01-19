@@ -6304,7 +6304,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1376872051514836}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6, y: 0.095, z: -32.32332}
+  m_LocalPosition: {x: 2.6, y: 0.095, z: -30.25}
   m_LocalScale: {x: 0.49999997, y: 0.49999997, z: 0.49999997}
   m_Children:
   - {fileID: 4966454936108402}
@@ -6835,7 +6835,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1205302436649880}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6, y: 0.095, z: -34.55667}
+  m_LocalPosition: {x: 2.6, y: 0.095, z: -37.106}
   m_LocalScale: {x: 0.4999999, y: 0.4999999, z: 0.4999999}
   m_Children:
   - {fileID: 4843248796876326}
@@ -20053,8 +20053,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.77248764, g: 0.9191176, b: 0.101373255, a: 1}
-  m_Intensity: 60
-  m_Range: 14
+  m_Intensity: 20
+  m_Range: 12
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -20089,8 +20089,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.77248764, g: 0.9191176, b: 0.101373255, a: 1}
-  m_Intensity: 60
-  m_Range: 14
+  m_Intensity: 20
+  m_Range: 12
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -20161,8 +20161,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.77248764, g: 0.9191176, b: 0.101373255, a: 1}
-  m_Intensity: 60
-  m_Range: 14
+  m_Intensity: 20
+  m_Range: 12
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -20197,8 +20197,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.77248764, g: 0.9191176, b: 0.101373255, a: 1}
-  m_Intensity: 60
-  m_Range: 14
+  m_Intensity: 20
+  m_Range: 12
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -20233,8 +20233,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.77248764, g: 0.9191176, b: 0.101373255, a: 1}
-  m_Intensity: 60
-  m_Range: 14
+  m_Intensity: 20
+  m_Range: 12
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -20269,8 +20269,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.77248764, g: 0.9191176, b: 0.101373255, a: 1}
-  m_Intensity: 60
-  m_Range: 14
+  m_Intensity: 20
+  m_Range: 12
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
