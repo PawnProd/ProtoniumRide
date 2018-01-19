@@ -4,17 +4,36 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine;
 
+/// <summary>
+/// Gère la persitence des données des modules
+/// </summary>
 public class StorageData : MonoBehaviour {
 
+    /// <summary>
+    /// Le chemin d'accès au fichier AvailableModules.txt
+    /// </summary>
     private static string filePath;
 
+    /// <summary>
+    /// Lie un ID à un module
+    /// </summary>
     [System.Serializable]
     public struct DataModule
     {
+        /// <summary>
+        /// L'id du module
+        /// </summary>
         public int id;
+
+        /// <summary>
+        /// Le gameObject du module
+        /// </summary>
         public GameObject module;
     }
 
+    /// <summary>
+    /// La liste de tous les modules en jeu
+    /// </summary>
     public List<DataModule> allModules;
 
     private void Awake()
@@ -24,21 +43,7 @@ public class StorageData : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
-        
-
-        if(!File.Exists(filePath))
-        {
-            print(filePath);
-            new FileStream(filePath, FileMode.Append).Dispose();
-
-            // Les modules de bases
-            SaveModule(0);
-            SaveModule(1);
-            SaveModule(4);
-        }
-
-
+        CreateFile();
 
     }
 	
@@ -107,11 +112,40 @@ public class StorageData : MonoBehaviour {
         writer.Dispose();
     }
 
+    /// <summary>
+    /// Initialise le chemin d'accès au fichier des modules
+    /// </summary>
     public static void SetPath()
     {
         if(filePath == null)
         {
             filePath = Application.persistentDataPath + "/AvailableModules.txt";
+        }
+    }
+
+    /// <summary>
+    /// Supprime le fichier des modules
+    /// </summary>
+    public static void ClearFile()
+    {
+        File.Delete(Application.persistentDataPath + "/AvailableModules.txt");
+    }
+
+    /// <summary>
+    /// Génère le fichier AvailableModules.txt s'il n'existe pas déjà
+    /// </summary>
+    public static void CreateFile()
+    {
+        if (!File.Exists(filePath))
+        {
+            SetPath();
+            print(filePath);
+            new FileStream(filePath, FileMode.Append).Dispose();
+
+            // Les modules de bases
+            SaveModule(0);
+            SaveModule(1);
+            SaveModule(4);
         }
     }
 }

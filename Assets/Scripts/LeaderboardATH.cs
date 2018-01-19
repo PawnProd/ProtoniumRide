@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Gère l'ATH de la page leaderboard
+/// </summary>
 public class LeaderboardATH : MonoBehaviour {
 
     /// <summary>
@@ -30,6 +33,9 @@ public class LeaderboardATH : MonoBehaviour {
     }
 }
 
+/// <summary>
+/// Composition d'une ligne dans l'ATH du leaderboard
+/// </summary>
 [System.Serializable]
 public class LeaderBoardLine
 {

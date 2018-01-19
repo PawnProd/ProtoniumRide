@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Permet de créer des objets à achetés
+/// </summary>
 [CreateAssetMenu(fileName = "New Achat Object")]
 public class AchatPanel : ScriptableObject {
 
@@ -43,6 +46,9 @@ public class AchatPanel : ScriptableObject {
 
 }
 
+/// <summary>
+/// Les différents achats
+/// </summary>
 public enum CategorieAchat
 {
     module,

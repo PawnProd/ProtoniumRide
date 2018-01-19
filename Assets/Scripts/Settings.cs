@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Gère le panneau d'options
+/// </summary>
 public class Settings : MonoBehaviour {
 
     /// <summary>

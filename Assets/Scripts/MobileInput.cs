@@ -2,10 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Gère l'ensemble des inputs mobiles/PC
+/// </summary>
 public class MobileInput : MonoBehaviour {
 
+    /// <summary>
+    /// La zone non définit lors du swipe
+    /// </summary>
     private const float DEADZONE = 100.0f;
 
+    /// <summary>
+    /// L'instance de la classe
+    /// </summary>
     public static MobileInput Instance { set; get; }
 
     /// <summary>

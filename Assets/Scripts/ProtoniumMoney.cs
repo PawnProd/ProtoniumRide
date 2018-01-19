@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Gère la money du jeu 
+/// </summary>
 public class ProtoniumMoney : MonoBehaviour {
 
     /// <summary>
@@ -32,6 +35,7 @@ public class ProtoniumMoney : MonoBehaviour {
     /// <param name="newValue"> La nouvelle valeur</param>
     public void SaveProtoniumMoney(int newValue)
     {
+        money = newValue;
         PlayerPrefs.SetInt("Protonium", newValue);
     }
 }

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Gère l'ath en jeu
+/// </summary>
 public class ATHManager : MonoBehaviour {
 
     /// <summary>

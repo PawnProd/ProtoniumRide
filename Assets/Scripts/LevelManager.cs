@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Gère le niveau de jeu
+/// </summary>
 public class LevelManager : MonoBehaviour {
 
     /// <summary>
@@ -45,6 +48,9 @@ public class LevelManager : MonoBehaviour {
     /// </summary>
     private List<GameObject> _currentModules = new List<GameObject>();
 
+    /// <summary>
+    /// Détermine si la fin de jeu a été enclenché
+    /// </summary>
     private bool endGame;
 
     private void Awake()
@@ -160,6 +166,10 @@ public class LevelManager : MonoBehaviour {
 
     }
 
+    /// <summary>
+    /// Affiche le panel de fin de jeu au bout de 4 seconds
+    /// </summary>
+    /// <returns></returns>
     IEnumerator ShowEnd()
     {
         yield return new WaitForSeconds(4);
@@ -172,6 +182,9 @@ public class LevelManager : MonoBehaviour {
     }
 }
 
+/// <summary>
+/// Les différents état de jeu
+/// </summary>
 public enum LevelState
 {
     running,

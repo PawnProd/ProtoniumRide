@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Gère le magasin
+/// </summary>
 public class ShopManager : MonoBehaviour {
 
     /// <summary>
@@ -175,7 +178,6 @@ public class ShopManager : MonoBehaviour {
 
     public void BuyModule(AchatPanel achat)
     {
-        print("Vous venez d'acheter le module " + achat.id + " au prix de " + achat.objPrice);
         // On sauvegarde le module dans le fichier et dans la liste des modules disponibles
         StorageData.SetPath();
         StorageData.SaveModule(achat.id);

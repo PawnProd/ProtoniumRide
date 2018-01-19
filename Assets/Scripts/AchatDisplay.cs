@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Affiche un AchatPanel dans le magasin
+/// </summary>
 public class AchatDisplay : MonoBehaviour {
 
     /// <summary>

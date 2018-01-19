@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Gère le mouvement du joueur
+/// </summary>
 public class PlayerMovement : MonoBehaviour {
 
     /// <summary>
@@ -20,9 +23,13 @@ public class PlayerMovement : MonoBehaviour {
     private CharacterController _controller;
 
     /// <summary>
-    /// La lane ou se situe le player
+    /// La lane vertical ou se situe le player
     /// </summary>
     private int _desiredLaneX = 1; // 0 = Gauche, 1 = Milieu, 2 = Droite
+
+    /// <summary>
+    /// La lane horizontale ou se situe le player
+    /// </summary>
     private int _desiredLaneY = 1; // 0 = Haut, 1 = Milieu, 2 = Bas
 
     public float Speed

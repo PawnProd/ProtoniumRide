@@ -4,6 +4,9 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine;
 
+/// <summary>
+/// Gère le système de leaderboard
+/// </summary>
 public class Leaderboard : MonoBehaviour {
 
     /// <summary>
@@ -40,7 +43,6 @@ public class Leaderboard : MonoBehaviour {
     {
         if(File.Exists(_path) && !alreadyLoad)
         {
-            print("Coucou 2 !");
             alreadyLoad = true;
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(_path, FileMode.Open);
@@ -88,6 +90,11 @@ public class Leaderboard : MonoBehaviour {
 
     }
 
+    /// <summary>
+    /// Recherche la position du score dans la liste
+    /// </summary>
+    /// <param name="score"> Le score dont on cherche la position</param>
+    /// <returns>L'index où positionné le score</returns>
     public static int SearchPosition(int score)
     {
         int i = 0;
@@ -103,6 +110,14 @@ public class Leaderboard : MonoBehaviour {
         }
 
         return i;
+    }
+
+    /// <summary>
+    /// Supprime le fichier leaderboard.dat
+    /// </summary>
+    public static void ClearFile()
+    {
+        File.Delete(_path);
     }
 }
 

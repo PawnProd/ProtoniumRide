@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Gère le joueur. Contient les stats et contrôle du player
+/// </summary>
 public class PlayerController : MonoBehaviour {
 
     /// <summary>
